@@ -15,7 +15,7 @@ function exportMoves(format) {
     var moveIds = [];
     var wins = [];
 
-    $(".row--selected").not(".odd").each(function(el) {
+    $(".row--selected").not(".odd").each(function() {
         moveIds.push($(this).attr('data-moveid'));
     });
 
