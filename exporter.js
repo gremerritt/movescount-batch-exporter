@@ -14,8 +14,9 @@
 function exportMoves(format) {
     var moveIds = [];
     var wins = [];
-    $('a[data-id^="move-"] i.active').each(function() {
-        moveIds.push($(this).parent().attr('data-id').substring(5));
+
+    $(".row--selected").not(".odd").each(function(el) {
+        moveIds.push($(this).attr('data-moveid'));
     });
 
     if (confirm("This will export " + moveIds.length + " in format: " + format + ". Press Ok to export or Cancel to abort.")) {
